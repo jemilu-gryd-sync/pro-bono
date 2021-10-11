@@ -1,0 +1,4 @@
+curl --location --request GET 'http://localhost:2088/protected' \
+--header 'Authorization: Signature keyId="987654321",algorithm="hmac-sha256",headers="keyId algorithm",signature="PFHspcQWi75ycMHP+oplUu3ZVjxa+OnjczPAxwbRisU="' \
+--header 'keyId: 987654321' \
+--header 'algorithm: hmac-256'

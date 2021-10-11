@@ -1,0 +1,15 @@
+Authorization: Signature keyId="API_KEY",algorithm="hmac-sha256",headers="(request-target) host date digest content-length",signature="Base64(HMAC-SHA256(signing string))"
+
+
+keyIs - '123456789'
+algorithm="hmac-sha256"
+headers="(request-target) host date digest content-length
+signature="Base64(HMAC-SHA256(signing string))
+
+# In the example we had
+
+headers="get /protected host date digest content-length"
+
+
+curl --location --request GET 'http://localhost:2088/protected' \
+--header 'Authorization: Signature keyId=123456789, algorithm="hmac-sha256", headers="get /protected host date digest content-length",signature="EOfFp8mzns5WXu/8nOJWyZKdDvFQgbESYoZR4VbzdN8="'
